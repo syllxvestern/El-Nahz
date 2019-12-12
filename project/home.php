@@ -282,10 +282,89 @@ while($row=mysqli_fetch_array($result)){
   <div class='card'>
     <div class='card-header' id='heading1'>
       <h2 class='mb-0'>
-        <button class='btn btn-link collapsed' type='button' data-toggle='collapse' data-target='#collapse1'
-          aria-expanded='false' aria-controls='collapse1'>
+        <button class='btn btn-link collapsed' type='button' data-toggle='modal' data-target='#<?php echo $row['namagame']?>'>
           <img src='data:image/jpeg;base64,<?php echo base64_encode( $row['gambar'] )?>' style='height: 75px; text-align: center;'/>
         </button>
+        
+<!-- Modal: modalQuickView -->
+<div class="modal fade" id="<?php echo $row['namagame']?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-5">
+            <!--Carousel Wrapper-->
+            <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails"
+              data-ride="carousel">
+              <!--Slides-->
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <img src='data:image/jpeg;base64,<?php echo base64_encode( $row['gambar'] )?>' width="300px">
+                </div>
+              </div>
+              <!--/.Slides-->
+              <!--Controls-->
+              
+              <!--/.Controls-->
+              
+                  
+                
+            </div>
+            <!--/.Carousel Wrapper-->
+          </div>
+          <div class="col-lg-7">
+            <h3 class="h7-responsive product-name">
+              <strong><?php echo $row['namagame']?></strong>
+            </h3>
+            <h4 class="h4-responsive">
+              
+            </h4>
+
+            
+
+
+            <!-- Add to Cart -->
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6">
+                  
+                  <select class="md-form mdb-select colorful-select dropdown-primary">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">White</option>
+                    <option value="2">Black</option>
+                    <option value="3">Pink</option>
+                  </select>
+                  
+
+                </div>
+                <div class="col-md-6">
+
+                  <select class="md-form mdb-select colorful-select dropdown-primary">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">XS</option>
+                    <option value="2">S</option>
+                    <option value="3">L</option>
+                  </select>
+                  
+
+                </div>
+              </div>
+              <div class="text-center">
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button class="btn btn-primary">Add to cart
+                  <i class="fas fa-cart-plus ml-2" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+            <!-- /.Add to Cart -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
       </h2>
     </div>
     
