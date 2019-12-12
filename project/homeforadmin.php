@@ -1,3 +1,7 @@
+<?php
+include 'koneksi.php';
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -274,8 +278,19 @@ box-shadow: 0 1px 0 0 #00c851; }
     <ul class='navbar-nav ml-auto nav-flex-icons'>
       <li class='nav-item avatar dropdown'>
       <div class="text-center">
-  <a href="" class="btn btn-default my-3" data-toggle="modal" data-target="#modalLRForm">
-    LogIn/Register</a>
+
+      <?php
+      if(isset($_SESSION['username'])){
+        echo "<a href=logout.php >Logout</a>";
+      }
+      else{
+        
+        ?>
+        <a href="" class="btn btn-default my-3" data-toggle="modal" data-target="#modalLRForm">
+        LogIn/Register</a><?php
+      }
+      ?>
+
 </div>
         <!-- <a class='nav-link p-0 nav-link dropdown-toggle' data-toggle='dropdown' id='navbarDropdownMenuLink-333'
           aria-haspopup='true' aria-expanded='false' href='#'>

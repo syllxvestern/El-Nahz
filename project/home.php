@@ -1,4 +1,5 @@
 <?php
+include 'koneksi.php';
 session_start();
 ?>
 <!DOCTYPE html>
@@ -25,64 +26,53 @@ session_start();
       padding: 0;
       height: 100%;
     }
-
     html {
       box-sizing: border-box;
     }
-
     *,
     *:before,
     *:after {
       box-sizing: inherit;
     }
-
     body {
       background: #f5f5f5;
       color: #333;
       font-family: arial, helvetica, sans-serif;
       font-size: 20px;
     }
-
     #head1 {
       margin-top: 2rem;
     }
-
     #ngisor {
       position: relative;
       /* height: 100%; */
       margin-top: 10px;
     }
-
     h1 {
       font-size: 32px;
       text-align: center;
     }
-
     p {
       font-size: 20px;
       line-height: 1.5;
       margin: 40px auto 0;
       max-width: 640px;
     }
-
     pre {
       background: #eee;
       border: 1px solid #ccc;
       font-size: 16px;
       padding: 20px;
     }
-
     form {
       margin: 10px auto 0;
     }
-
     label {
       display: block;
       font-size: 12px;
       font-weight: bold;
       margin-bottom: 0px;
     }
-
     input {
       border: 2px solid #333;
       border-radius: 5px;
@@ -91,9 +81,7 @@ session_start();
       margin: 0 0 0px;
       padding: .5px 1px;
       width: 100%;
-
     }
-
     button {
       background: #fff;
       border: 2px solid #333;
@@ -103,13 +91,11 @@ session_start();
       font-weight: bold;
       /* padding: 1rem; */
     }
-
     button:hover {
       background: #333;
       border: 2px solid #333;
       color: #fff;
     }
-
     .main {
       background: #fff;
       border: 5px solid #ccc;
@@ -119,36 +105,28 @@ session_start();
       width: 80%;
       max-width: 700px;
     }
-
-
     .col-5 {
       background-color: white;
     }
-
     body {
       background-color: rgb(194, 194, 194);
     }
-
     .align-self-center {
       margin: auto;
       margin-top: 100px;
     }
-
     .input {
       height: 40px;
       margin-bottom: 10px;
       width: 390px;
     }
-
     .input.button {
       width: 415px;
     }
-
     .container.input {
       margin-left: 10px;
       width: 415px;
     }
-
     /* .input{
             background-color: gray;
             border-color: black;
@@ -157,7 +135,6 @@ session_start();
       margin-top: 50px;
       margin-bottom: 25px;
     }
-
     .icon {
       padding: 10px;
       position: absolute;
@@ -165,7 +142,6 @@ session_start();
       min-width: 400px;
       text-align: right;
     }
-
     .input-icons {
       border-color: black;
       border-spacing: 1px;
@@ -173,56 +149,44 @@ session_start();
       margin-right: 20px;
       width: 25px;
     }
-
     .input-group {
       width: 440px;
     }
-
     .link:hover {
       text-decoration: none;
     }
-
     footer.page-footer {
       bottom: 0;
       color: #fff
     }
-
     footer.page-footer .container-fluid {
       width: auto
     }
-
     footer.page-footer .footer-copyright {
       overflow: hidden;
       color: rgba(255, 255, 255, 0.6);
       background-color: rgba(0, 0, 0, 0.2)
     }
-
     footer {
       position: absolute;
       bottom: 0;
       width: 100%;
-
     }
-
     footer.page-footer a {
       color: #fff
     }
-
     p {
     font-size: 12px;
     line-height: 1.5;
     margin: 5px auto 0;
     max-width: 640px;
 }
-
     @media not all and (min-resolution:.001dpcm) {
       @supports (-webkit-appearance: none) and (stroke-color:transparent) {
-
         .number-input.def-number-input.safari_only button:before,
         .number-input.def-number-input.safari_only button:after {
           margin-top: -.3rem;
         }
-
       }
     }
   </style>
@@ -254,25 +218,14 @@ session_start();
       <div class="text-center">
 
       <?php
-<<<<<<< HEAD
-      if($_SESSION!=null){
-        echo ($_SESSION);
-=======
-      session_start();
       if(isset($_SESSION['email'])){
-        echo "AAAAAAAAA";
+        echo "<a href=logout.php >Logout</a>";
       }
       else{
         
->>>>>>> 8243e508e7f3672ac8678ec02a103049a2148aa8
         ?>
         <a href="" class="btn btn-default my-3" data-toggle="modal" data-target="#modalLRForm">
-        LogIn/Register</a>
-        <?php
-      }
-      else{
-        ?>
-        <?php
+        LogIn/Register</a><?php
       }
       ?>
   

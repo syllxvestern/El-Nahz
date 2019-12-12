@@ -1,19 +1,23 @@
 <?php
     include "koneksi.php";
+    session_start();
     $user = $_POST['email'];
     $pass = $_POST['password'];
  
-    $result = mysqli_query($connect, "select email, password from user where email='$user' and password='$pass'");
+    $result = mysqli_query($connect, "select email, password,level from user where email='$user' and password='$pass'");
     $cek = mysqli_num_rows($result);
     if($cek){
-<<<<<<< HEAD
-      session_start();
-        $_SESSION['email'] = $row['email'];
-=======
-        session_start();
-        $_SESSION['email'] = $user;
->>>>>>> 8243e508e7f3672ac8678ec02a103049a2148aa8
-        header("Location: home.php?loginberhasil");
+        $data = mysqli_fetch_assoc($result);
+        if($data['level']=="admin"){
+
+            $_SESSION['username'] = $username;
+            $_SESSION['level'] = "admin";
+
+            header("location:homeforadmin.php?loginadminberhasil");
+        }else{
+            $_SESSION['email'] = $user;
+            header("Location: home.php?loginuserberhasil");
+        }
 
     }
     else{
