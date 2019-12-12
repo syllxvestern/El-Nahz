@@ -230,8 +230,9 @@ session_start();
 </head>
 <body>
   <nav class='mb-1 navbar navbar-expand-lg navbar-dark bg-primary info-color'>
-    <a class='navbar-brand mr-0 mr-md-2' href='home.html' aria-label='Bootstrap'>
-      <img src='m.png' class='rounded-circle' height='50px'>
+    <a class='navbar-brand mr-0 mr-md-2' href='home.php' aria-label='Bootstrap'>
+    <i class="fa fa-gamepad" aria-hidden="true"></i>
+
     </a>
     <div class='navbar-nav-scroll'>
       <ul class='navbar-nav bd-navbar-nav flex-row'>
@@ -270,7 +271,7 @@ session_start();
         <!-- <a class='nav-link p-0 nav-link dropdown-toggle' data-toggle='dropdown' id='navbarDropdownMenuLink-333'
           aria-haspopup='true' aria-expanded='false' href='#'>
           <?php
-          // include "login.php";
+          // // include "login.php";
           // while($row = mysqli_fetch_array(mysqli_query($connect, "select username from user where username='$user'"))){
           //   echo $row['username'];
           // echo "<img src='data:image/jpeg;base64,".base64_encode( $row['avatar'] )."' class='rounded-circle z-depth-0' alt='avatar image' height='35'>";
