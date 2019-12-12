@@ -343,7 +343,7 @@ while($row=mysqli_fetch_array($result)){
       </div>
     </div>
   </div>
-</div><script type="text/javascript" src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/compiled-4.10.1.min.js"></script><script type="text/javascript" src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/plugins/mdb-plugins-gathered.min.js"></script><script type="text/javascript">// Material Select Initialization
+</div><script type="text/javascript" src="compiled-4.10.1.min.js"></script><script type="text/javascript" src="js/mdb-plugins-gathered.min.js"></script><script type="text/javascript">// Material Select Initialization
 $(document).ready(function() {
 $('.mdb-select').materialSelect();
 });</script>
