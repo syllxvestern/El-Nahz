@@ -6,6 +6,7 @@ session_start();
 <html>
 <head>
 <title>Halaman Admin</title>
+<link rel="shortcut icon" type="image/png" href="m.png"/>
   <link rel='stylesheet' type='text/css' href='css/bootstrap.css'>
   <link rel='stylesheet' type='text/css' href='mdb/css/mdb.css'>
   <link rel='stylesheet' type='text/css' href='compiled-4.10.1.min.css'>
@@ -257,7 +258,7 @@ box-shadow: 0 1px 0 0 #00c851; }
 </head>
 <body>
   <nav class='mb-1 navbar navbar-expand-lg navbar-dark bg-primary info-color'>
-    <a class='navbar-brand mr-0 mr-md-2' href='home.html' aria-label='Bootstrap'>
+    <a class='navbar-brand mr-0 mr-md-2' href='home.php' aria-label='Bootstrap'>
       <img src='m.png' class='rounded-circle z-depth-0' height='50'>
     </a>
     <div class='navbar-nav-scroll'>
@@ -608,7 +609,7 @@ while($row=mysqli_fetch_array($result)){
   <!-- Footer Elements -->
 
   <!-- Copyright -->
-  <div class='footer-copyright text-center py-3'> © 2018 Copyright:
+  <div class='footer-copyright text-center py-3'> © 2019 Copyright:
     <a href='https://Google.com/'>Ale Ale</a>
   </div>
   <!-- Copyright -->

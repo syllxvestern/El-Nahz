@@ -6,6 +6,7 @@ session_start();
 <html>
 <head>
 <title>Hmm Shop</title>
+<link rel="shortcut icon" type="image/png" href="m.png"/>
   <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css'>
   <link rel='stylesheet' type='text/css' href='css/mdb-plugins-gathered.min.js'>
   <link rel='stylesheet' type='text/css' href='css/bootstrap.css'>
@@ -210,7 +211,7 @@ session_start();
           <a class='nav-link' href=#>Promo</a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link ' href=#>About us</a>
+          <a class='nav-link ' href=about.php>About us</a>
         </li>
         <li class='nav-item'>
           <a class='nav-link' href=#>Pro</a>
@@ -517,7 +518,7 @@ $('.mdb-select').materialSelect();
   <!-- Footer Elements -->
 
   <!-- Copyright -->
-  <div class='footer-copyright text-center py-3'> © 2018 Copyright:
+  <div class='footer-copyright text-center py-3'> © 2019 Copyright:
     <a href='https://Google.com/'>Ale Ale</a>
   </div>
   <!-- Copyright -->
