@@ -5,11 +5,14 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css'>
+  <link rel='stylesheet' type='text/css' href='css/mdb-plugins-gathered.min.js'>
   <link rel='stylesheet' type='text/css' href='css/bootstrap.css'>
   <link rel='stylesheet' type='text/css' href='mdb/css/mdb.css'>
   <link rel='stylesheet' type='text/css' href='compiled-4.10.1.min.css'>
   <link rel='stylesheet' type='text/css' href='fontawesome-free-5.11.2-web/css/all.css'>
   <script type=text/javascript src="compiled-4.10.1.min.js"></script>
+  <script type=text/javascript src="js/mdb-plugins-gathered.min.js"></script>
   <script src='https://code.jquery.com/jquery-3.4.1.slim.min.js'
     integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n'
     crossorigin='anonymous'></script>
@@ -296,9 +299,8 @@ while($row=mysqli_fetch_array($result)){
             <h3 class="h7-responsive product-name">
               <strong><?php echo $row['namagame']?></strong>
             </h3>
-            <h4 class="h4-responsive">
-              
-            </h4>
+            <h4 class="h4-responsive"></h4>
+            
 
             
 
@@ -307,25 +309,23 @@ while($row=mysqli_fetch_array($result)){
             <div class="card-body">
               <div class="row">
                 <div class="col-md-6">
-                  
+
                   <select class="md-form mdb-select colorful-select dropdown-primary">
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">White</option>
-                    <option value="2">Black</option>
-                    <option value="3">Pink</option>
+                    <option value="" disabled selected>Pilih Nominal Top Up</option>
+                    <option value="1">100</option>
+                    <option value="2">500</option>
+                    <option value="3">1000</option>
                   </select>
-                  
 
                 </div>
                 <div class="col-md-6">
 
                   <select class="md-form mdb-select colorful-select dropdown-primary">
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">XS</option>
-                    <option value="2">S</option>
-                    <option value="3">L</option>
+                    <option value="" disabled selected>Pilih Metode Pembayaran</option>
+                    <option value="1">Telkomsel</option>
+                    <option value="2">Indosat</option>
+                    <option value="3">Three</option>
                   </select>
-                  
 
                 </div>
               </div>
@@ -333,17 +333,20 @@ while($row=mysqli_fetch_array($result)){
 
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button class="btn btn-primary">Add to cart
-                  <i class="fas fa-cart-plus ml-2" aria-hidden="true"></i>
-                </button>
+                 </button>
               </div>
             </div>
-            <!-- /.Add to Cart -->
+                <i class="fas fa-cart-plus ml-2" aria-hidden="true"></i>
+             <!-- /.Add to Cart -->
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</div><script type="text/javascript" src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/compiled-4.10.1.min.js"></script><script type="text/javascript" src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/plugins/mdb-plugins-gathered.min.js"></script><script type="text/javascript">// Material Select Initialization
+$(document).ready(function() {
+$('.mdb-select').materialSelect();
+});</script>
       </h2>
     </div>
     
@@ -510,5 +513,4 @@ while($row=mysqli_fetch_array($result)){
 
 </footer>
 <!-- Footer -->
-
 </html>
