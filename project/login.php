@@ -14,7 +14,8 @@
             $_SESSION['level'] = "admin";
 
             header("location:homeforadmin.php?loginadminberhasil");
-        }else{
+        }
+        else{
             $_SESSION['email'] = $user;
             header("Location: home.php?loginuserberhasil");
         }

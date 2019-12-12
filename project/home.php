@@ -224,7 +224,7 @@ session_start();
 
       <?php
       if(isset($_SESSION['email'])){
-        echo "<a href=logout.php >Logout</a>";
+        echo "<a href=logout.php class='btn btn-default my-3'>Logout</a>";
       }
       else{
         
@@ -309,36 +309,43 @@ while($row=mysqli_fetch_array($result)){
 
             <!-- Add to Cart -->
             <div class="card-body">
+              <form action="transaksi.php" method=post>
+              
+              <input type="hidden" id="hide" class="form-control" name=idgame value='<?php echo $row['idgame']?>'></textarea>
+              <!-- <script>
+                document.getElementById('hide').hidden = true;
+              </script> -->
+              
               <div class="row">
                   
                 <div class="col-md-6">
 
-                  <select class="md-form mdb-select colorful-select dropdown-primary">
+                  <select class="md-form mdb-select colorful-select dropdown-primary" name=nominal>
                     <option value="" disabled selected>Pilih Nominal Top Up</option>
-                    <option value="1">100</option>
-                    <option value="2">500</option>
-                    <option value="3">1000</option>
+                    <option value="100">100</option>
+                    <option value="500">500</option>
+                    <option value="1000">1000</option>
                   </select>
 
                 </div>
                 <div class="col-md-6">
 
-                  <select class="md-form mdb-select colorful-select dropdown-primary">
+                  <select class="md-form mdb-select colorful-select dropdown-primary" name=metode>
                     <option value="" disabled selected>Pilih Metode Pembayaran</option>
-                    <option value="1">Telkomsel</option>
-                    <option value="2">Indosat</option>
-                    <option value="3">Three</option>
-                    <option value="3">XL</option>
+                    <option value="Telkomsel">Telkomsel</option>
+                    <option value="Indosat">Indosat</option>
+                    <option value="Three">Three</option>
+                    <option value="XL">XL</option>
                   </select>
 
                 </div>
               </div>
               <div class="md-form">
-              <input type="text" id="form79textarea" class="form-control"></textarea>
+              <input type="text" id="form79textarea" class="form-control" name=gameid></textarea>
               <label for="form79textarea">Game ID Anda</label>
               </div>
               <div class="md-form">
-              <input type="tel" id="form" class="form-control" ></textarea>
+              <input type="tel" id="form" class="form-control" name=notelp></textarea>
               <label for="form">No. Telepon</label>
               </div>
               <div class="text-center">
@@ -347,6 +354,7 @@ while($row=mysqli_fetch_array($result)){
                 <button class="btn btn-primary">Add to cart
                  </button>
               </div>
+</form>
             </div>
                 <i class="fas fa-cart-plus ml-2" aria-hidden="true"></i>
              <!-- /.Add to Cart -->
