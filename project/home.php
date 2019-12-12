@@ -1,5 +1,4 @@
 <?php
-include 'koneksi.php';
 session_start();
 ?>
 <!DOCTYPE html>
@@ -254,12 +253,16 @@ session_start();
       <div class="text-center">
 
       <?php
-      if(isset($_SESSION['email'])){
-      
-      }
-      else{?>
+      if($_SESSION!=null){
+        echo ($_SESSION);
+        ?>
         <a href="" class="btn btn-default my-3" data-toggle="modal" data-target="#modalLRForm">
-        LogIn/Register</a><?php
+        LogIn/Register</a>
+        <?php
+      }
+      else{
+        ?>
+        <?php
       }
       ?>
   
