@@ -308,6 +308,7 @@ while($row=mysqli_fetch_array($result)){
             <!-- Add to Cart -->
             <div class="card-body">
               <div class="row">
+                  
                 <div class="col-md-6">
 
                   <select class="md-form mdb-select colorful-select dropdown-primary">
@@ -328,6 +329,14 @@ while($row=mysqli_fetch_array($result)){
                   </select>
 
                 </div>
+              </div>
+              <div class="md-form">
+              <input type="text" id="form79textarea" class="form-control"></textarea>
+              <label for="form79textarea">Game ID Anda</label>
+              </div>
+              <div class="md-form">
+              <input type="tel" id="form" class="form-control" ></textarea>
+              <label for="form">No. Telepon</label>
               </div>
               <div class="text-center">
 
