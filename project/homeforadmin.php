@@ -5,6 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
+<title>Halaman Admin</title>
   <link rel='stylesheet' type='text/css' href='css/bootstrap.css'>
   <link rel='stylesheet' type='text/css' href='mdb/css/mdb.css'>
   <link rel='stylesheet' type='text/css' href='compiled-4.10.1.min.css'>
@@ -318,7 +319,7 @@ box-shadow: 0 1px 0 0 #00c851; }
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Write to us</h4>
+        <h4 class="modal-title w-100 font-weight-bold">Add Games</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -350,7 +351,7 @@ box-shadow: 0 1px 0 0 #00c851; }
 
       </div>
       <div class="modal-footer d-flex justify-content-center">
-        <button class="btn btn-unique">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
+        <button class="btn btn-unique">Tambah <i class="fas fa-paper-plane-o ml-1"></i></button>
       </div>
     </div>
   </div>
@@ -438,8 +439,8 @@ while($row=mysqli_fetch_array($result)){
               <div class="text-center">
 
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button class="btn btn-primary">Add to cart
-                  <i class="fas fa-cart-plus ml-2" aria-hidden="true"></i>
+                <button class="btn btn-danger">Delete
+                  
                 </button>
               </div>
             </div>

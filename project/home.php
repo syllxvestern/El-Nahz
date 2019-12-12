@@ -5,6 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
+<title>Hmm Shop</title>
   <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css'>
   <link rel='stylesheet' type='text/css' href='css/mdb-plugins-gathered.min.js'>
   <link rel='stylesheet' type='text/css' href='css/bootstrap.css'>
@@ -326,6 +327,7 @@ while($row=mysqli_fetch_array($result)){
                     <option value="1">Telkomsel</option>
                     <option value="2">Indosat</option>
                     <option value="3">Three</option>
+                    <option value="3">XL</option>
                   </select>
 
                 </div>
