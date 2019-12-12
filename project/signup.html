@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome-free-5.11.2-web/css/all.css">
+    <style>
+        .col-5 {
+            background-color: white;
+        }
+
+        body {
+            background-color: rgb(194, 194, 194);
+        }
+
+        .align-self-center {
+            margin: auto;
+            margin-top: 100px;
+        }
+
+        .input {
+            height: 40px;
+            margin-bottom: 10px;
+            width: 390px;
+        }
+        .input.button{
+            width: 415px;
+        }
+
+        .container.input {
+            margin-left: 10px;
+            width: 415px;
+        }
+
+        /* .input{
+            background-color: gray;
+            border-color: black;
+        } */
+        .container.form {
+            margin-top: 50px;
+            margin-bottom: 25px;
+        }
+
+        .icon {
+            padding: 10px;
+            position: absolute;
+            color: gray;
+            min-width: 400px;
+            text-align: right;
+        }
+
+        .input-icons {
+            border-color: black;
+            border-spacing: 1px;
+            height: 40px;
+            margin-right: 20px;
+            width: 25px;
+        }
+
+        .input-group {
+            width: 440px;
+        }
+        .link:hover{
+            text-decoration: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-5 align-self-center">
+                <form action="signup.php" method=post>
+                    <div class="container form">
+                        <h1 class=display-4 style="text-align: center;">Logo</h1>
+                        <h3 class=display-9 style="text-align: center;">Sign Up</h3><br>
+                        <div class="input-group">
+                            <input class="input py-2 border-right-0 border" type="text" placeholder="username" name=username required>
+                            <span class="input-group-append">
+                                <div class="input-icons py-2 border-left-0 border bg-transparent"><i
+                                        class="fa fa-user" aria-hidden="true"></i></div>
+                            </span>
+                        </div>
+                        <div class="input-group">
+                            <input class="input py-2 border-right-0 border" type="email" placeholder="email" name=email required>
+                            <span class="input-group-append" name=email>
+                                <div class="input-icons py-2 border-left-0 border bg-transparent"><i
+                                        class="fa fa-envelope" aria-hidden="true"></i></div>
+                            </span>
+                        </div>
+                        <div class="input-group">
+                            <input class="input py-2 border-right-0 border" type="text" name=password placeholder="password" required>
+                            <span class="input-group-append">
+                                <div class="input-icons py-2 border-left-0 border bg-transparent"><i
+                                        class="fa fa-lock" aria-hidden="true"></i></div>
+                            </span>
+                        </div>
+                        <input class="input py-2 border" type="password" placeholder="confirm password" required style="width: 415px;">
+                        <div class="container input">
+                            <div class=row>
+                                <div class=col-sm>
+                            <input class="form-check-input border" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                I Accept Term
+                            </label>
+                        </div>
+                            
+                        </div>
+                        </div>
+                        <input type="submit" value="Login" class="input button" style="margin-bottom: 20px;">
+                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
