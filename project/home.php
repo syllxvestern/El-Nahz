@@ -1,3 +1,7 @@
+<?php
+include 'koneksi.php';
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -247,9 +251,18 @@
     </div>
     <ul class='navbar-nav ml-auto nav-flex-icons'>
       <li class='nav-item avatar dropdown'>
-      <div class="text-center"> 
-  <a href="" class="btn btn-default my-3" data-toggle="modal" data-target="#modalLRForm">
-    LogIn/Register</a>
+      <div class="text-center">
+
+      <?php
+      if(isset($_SESSION['email'])){
+      
+      }
+      else{?>
+        <a href="" class="btn btn-default my-3" data-toggle="modal" data-target="#modalLRForm">
+        LogIn/Register</a><?php
+      }
+      ?>
+  
 </div>
         <!-- <a class='nav-link p-0 nav-link dropdown-toggle' data-toggle='dropdown' id='navbarDropdownMenuLink-333'
           aria-haspopup='true' aria-expanded='false' href='#'>
@@ -402,24 +415,25 @@ while($row=mysqli_fetch_array($result)){
         <div class="tab-content">
           <!--Panel 7-->
           <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
-
+          <form action=login.php method=post>
             <!--Body-->
             <div class="modal-body mb-1">
               <div class="md-form form-sm mb-5">
                 <i class="fas fa-envelope prefix"></i>
-                <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
+                <input type="email" id="modalLRInput10" class="form-control form-control-sm validate"  name=email>
                 <label data-error="wrong" data-success="right" for="modalLRInput10">Your email</label>
               </div>
 
               <div class="md-form form-sm mb-4">
                 <i class="fas fa-lock prefix"></i>
-                <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
+                <input type="password" id="modalLRInput11" class="form-control form-control-sm validate"  name=password>
                 <label data-error="wrong" data-success="right" for="modalLRInput11">Your password</label>
               </div>
               <div class="text-center mt-2">
-                <button class="btn btn-info">Log in <i class="fas fa-sign-in ml-1"></i></button>
+                <button class="btn btn-info" type=submit>Log in <i class="fas fa-sign-in ml-1"></i></button>
               </div>
             </div>
+            </form>
             <!--Footer-->
             <div class="modal-footer">
               <div class="options text-center text-sm-right mt-1">
