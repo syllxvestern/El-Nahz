@@ -2,8 +2,10 @@
 <html>
 <head>
   <link rel='stylesheet' type='text/css' href='css/bootstrap.css'>
-  <link rel='stylesheet' type='text/css' href='fontawesome-free-5.11.2-web/css/all.css'>
   <link rel='stylesheet' type='text/css' href='mdb/css/mdb.css'>
+  <link rel='stylesheet' type='text/css' href='compiled-4.10.1.min.css'>
+  <link rel='stylesheet' type='text/css' href='fontawesome-free-5.11.2-web/css/all.css'>
+  <script type=text/javascript src="compiled-4.10.1.min.js"></script>
   <script src='https://code.jquery.com/jquery-3.4.1.slim.min.js'
     integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n'
     crossorigin='anonymous'></script>
@@ -203,69 +205,11 @@
       color: #fff
     }
 
-    .form-dark .font-small {
-  font-size: 0.8rem; }
-
-.form-dark [type="radio"] + label,
-.form-dark [type="checkbox"] + label {
-  font-size: 0.8rem; }
-
-.form-dark [type="checkbox"] + label:before {
-  top: 2px;
-  width: 15px;
-  height: 15px; }
-
-.form-dark .md-form label {
-  color: #fff; }
-
-.form-dark input[type=email]:focus:not([readonly]) {
-  border-bottom: 1px solid #00C851;
-  -webkit-box-shadow: 0 1px 0 0 #00C851;
-  box-shadow: 0 1px 0 0 #00C851; }
-
-.form-dark input[type=email]:focus:not([readonly]) + label {
-  color: #fff; }
-
-.form-dark input[type=password]:focus:not([readonly]) {
-  border-bottom: 1px solid #00C851;
-  -webkit-box-shadow: 0 1px 0 0 #00C851;
-  box-shadow: 0 1px 0 0 #00C851; }
-
-.form-dark input[type=password]:focus:not([readonly]) + label {
-  color: #fff; }
-
-.form-dark input[type="checkbox"] + label:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 17px;
-  height: 17px;
-  z-index: 0;
-  border: 1.5px solid #fff;
-  border-radius: 1px;
-  margin-top: 2px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s; }
-
-.form-dark input[type="checkbox"]:checked + label:before {
-  top: -4px;
-  left: -3px;
-  width: 12px;
-  height: 22px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: transparent #00c851 #00c851 transparent;
-  -webkit-transform: rotate(40deg);
-  -ms-transform: rotate(40deg);
-  transform: rotate(40deg);
-  -webkit-backface-visibility: hidden;
-  -webkit-transform-origin: 100% 100%;
-  -ms-transform-origin: 100% 100%;
-  transform-origin: 100% 100%; }
-
-.form-dark .modal-header {
-    border-bottom: none;
+    p {
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 5px auto 0;
+    max-width: 640px;
 }
 
     @media not all and (min-resolution:.001dpcm) {
@@ -303,20 +247,24 @@
     </div>
     <ul class='navbar-nav ml-auto nav-flex-icons'>
       <li class='nav-item avatar dropdown'>
-        <a class='nav-link p-0 nav-link dropdown-toggle' data-toggle='dropdown' id='navbarDropdownMenuLink-333'
+      <div class="text-center">
+  <a href="" class="btn btn-default my-3" data-toggle="modal" data-target="#modalLRForm">
+    LogIn/Register</a>
+</div>
+        <!-- <a class='nav-link p-0 nav-link dropdown-toggle' data-toggle='dropdown' id='navbarDropdownMenuLink-333'
           aria-haspopup='true' aria-expanded='false' href='#'>
           <?php
-          include "login.php";
-          while($row = mysqli_fetch_array(mysqli_query($connect, "select username from user where username='$user'"))){
-            echo $row['username'];
-          echo "<img src='data:image/jpeg;base64,".base64_encode( $row['avatar'] )."' class='rounded-circle z-depth-0' alt='avatar image' height='35'>";
-  }
+          // include "login.php";
+          // while($row = mysqli_fetch_array(mysqli_query($connect, "select username from user where username='$user'"))){
+          //   echo $row['username'];
+          // echo "<img src='data:image/jpeg;base64,".base64_encode( $row['avatar'] )."' class='rounded-circle z-depth-0' alt='avatar image' height='35'>";
+  // }
           ?>
         </a>
         <div class='dropdown-menu dropdown-menu-right dropdown-default' aria-labelledby='navbarDropdownMenuLink-333'>
           <a class='dropdown-item' href='#'>Profil</a>
           <a class='dropdown-item' href='#'>Logout</a>
-        </div>
+        </div> -->
       </li>
 
     </ul>
@@ -329,42 +277,20 @@ $result = mysqli_query($connect, 'select * from game');
 while($row=mysqli_fetch_array($result)){
 ?>
   
-<div class=col-md-2>
+<div class=col-sm-3>
 <div class='accordion' id='accordionExample'>
   <div class='card'>
     <div class='card-header' id='heading1'>
       <h2 class='mb-0'>
-        <button class='btn btn-link collapsed' type='button' data-toggle="modal" data-target="#centralModalLg">
-          <img src='data:image/jpeg;base64,<?php echo base64_encode( $row['gambar'] )?>' style='height: 50px;'/>
+        <button class='btn btn-link collapsed' type='button' data-toggle='collapse' data-target='#collapse1'
+          aria-expanded='false' aria-controls='collapse1'>
+          <img src='data:image/jpeg;base64,<?php echo base64_encode( $row['gambar'] )?>' style='height: 75px; text-align: center;'/>
         </button>
       </h2>
     </div>
+    
   </div>
 </div>
-</div>
-<div class="modal fade" id="centralModalLg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
-
-  <!-- Change class .modal-sm to change the size of the modal -->
-  <div class="modal-dialog modal-lg" role="document">
-
-
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title w-100" id="myModalLabel"><?php echo $row['namagame']?></h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary btn-sm">Save changes</button>
-      </div>
-    </div>
-  </div>
 </div>
       
     <?php
@@ -373,8 +299,7 @@ while($row=mysqli_fetch_array($result)){
   </div>
       </div>
 
-     <!--Modal: Login / Register Form-->
-<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog cascading-modal" role="document">
     <!--Content-->
     <div class="modal-content">
@@ -383,7 +308,7 @@ while($row=mysqli_fetch_array($result)){
       <div class="modal-c-tabs">
 
         <!-- Nav tabs -->
-        <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+        <ul class="nav nav-tabs md-tabs tabs-2 bg-primary darken-3" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
               Login</a>
@@ -418,7 +343,7 @@ while($row=mysqli_fetch_array($result)){
             </div>
             <!--Footer-->
             <div class="modal-footer">
-              <div class="options text-center text-md-right mt-1">
+              <div class="options text-center text-sm-right mt-1">
                 <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
                 <p>Forgot <a href="#" class="blue-text">Password?</a></p>
               </div>
@@ -471,17 +396,6 @@ while($row=mysqli_fetch_array($result)){
     </div>
     <!--/.Content-->
   </div>
-</div>
-<!--Modal: Login / Register Form-->
-
-<div class="text-center">
-  <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm">Launch
-    Modal LogIn/Register</a>
-</div>
-
-<div class="text-center">
-  <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#darkModalForm">Launch modal
-    register Form</a>
 </div>
 </body>
 <br>
