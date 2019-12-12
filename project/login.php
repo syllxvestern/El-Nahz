@@ -6,7 +6,8 @@
     $result = mysqli_query($connect, "select email, password from user where email='$user' and password='$pass'");
     $cek = mysqli_num_rows($result);
     if($cek){
-        $_SESSION['email'] = $row['email'];
+        session_start();
+        $_SESSION['email'] = $user;
         header("Location: home.php?loginberhasil");
     }
     else{
