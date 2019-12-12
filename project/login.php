@@ -4,12 +4,12 @@
     $user = $_POST['email'];
     $pass = $_POST['password'];
  
-    $result = mysqli_query($connect, "select email, password,level from user where email='$user' and password='$pass'");
+    $result = mysqli_query($connect, "select email, password,level,avatar from user where email='$user' and password='$pass'");
     $cek = mysqli_num_rows($result);
     if($cek){
         $data = mysqli_fetch_assoc($result);
         if($data['level']=="admin"){
-
+            
             $_SESSION['username'] = $username;
             $_SESSION['level'] = "admin";
 

@@ -414,32 +414,33 @@ while($row=mysqli_fetch_array($result)){
 
           <!--Panel 8-->
           <div class="tab-pane fade" id="panel8" role="tabpanel">
-
+          <form action=signup.php method=post>
             <!--Body-->
             <div class="modal-body">
               <div class="md-form form-sm mb-5">
                 <i class="fas fa-envelope prefix"></i>
-                <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
+                <input type="email" id="modalLRInput12" class="form-control form-control-sm validate" name=email>
                 <label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
               </div>
 
               <div class="md-form form-sm mb-5">
                 <i class="fas fa-lock prefix"></i>
-                <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
+                <input type="password" id="modalLRInput13" class="form-control form-control-sm validate" name='password'>
                 <label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
               </div>
 
               <div class="md-form form-sm mb-4">
                 <i class="fas fa-lock prefix"></i>
-                <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
+                <input type="password" id="modalLRInput14" class="form-control form-control-sm validate" name='password'>
                 <label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
               </div>
 
               <div class="text-center form-sm mt-2">
-                <button class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+                <button class="btn btn-info" type=submit>Sign up <i class="fas fa-sign-in ml-1"></i></button>
               </div>
 
             </div>
+            </form>
             <!--Footer-->
             <div class="modal-footer">
               <div class="options text-right">
