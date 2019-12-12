@@ -227,7 +227,7 @@
 <body>
   <nav class='mb-1 navbar navbar-expand-lg navbar-dark bg-primary info-color'>
     <a class='navbar-brand mr-0 mr-md-2' href='home.html' aria-label='Bootstrap'>
-      <img src='m.png' class='rounded-circle z-depth-0' height='50'>
+      <img src='m.png' class='rounded-circle' height='50px'>
     </a>
     <div class='navbar-nav-scroll'>
       <ul class='navbar-nav bd-navbar-nav flex-row'>
@@ -247,7 +247,7 @@
     </div>
     <ul class='navbar-nav ml-auto nav-flex-icons'>
       <li class='nav-item avatar dropdown'>
-      <div class="text-center">
+      <div class="text-center"> 
   <a href="" class="btn btn-default my-3" data-toggle="modal" data-target="#modalLRForm">
     LogIn/Register</a>
 </div>
