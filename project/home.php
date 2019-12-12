@@ -253,8 +253,17 @@ session_start();
       <div class="text-center">
 
       <?php
+<<<<<<< HEAD
       if($_SESSION!=null){
         echo ($_SESSION);
+=======
+      session_start();
+      if(isset($_SESSION['email'])){
+        echo "AAAAAAAAA";
+      }
+      else{
+        
+>>>>>>> 8243e508e7f3672ac8678ec02a103049a2148aa8
         ?>
         <a href="" class="btn btn-default my-3" data-toggle="modal" data-target="#modalLRForm">
         LogIn/Register</a>
