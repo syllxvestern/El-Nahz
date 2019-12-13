@@ -322,6 +322,7 @@ box-shadow: 0 1px 0 0 #00c851; }
   aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+    <form action="" method=post>
       <div class="modal-header text-center">
         <h4 class="modal-title w-100 font-weight-bold">Add Games</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -331,20 +332,21 @@ box-shadow: 0 1px 0 0 #00c851; }
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <i class="fas fa-user prefix grey-text"></i>
-          <input type="text" id="form34" class="form-control validate">
+          <input type="text" id="form34" class="form-control validate" name="gamename">
           <label data-error="wrong" data-success="right" for="form34">Game Name</label>
         </div>
 
         <div class="md-form mb-5">
         <i class="fas fa-cloud-upload-alt ml-3"></i>
-        <input type="file" id="form33" class="form-control validate">
+        <input type="file" id="form33" class="form-control validate" name="file">
         <label data-error="wrong" data-success="right" for="form33">Choose File</label>
       </div>
 
       </div>
       <div class="modal-footer d-flex justify-content-center">
-        <button class="btn btn-unique">Tambah <i class="fas fa-paper-plane-o ml-1"></i></button>
+        <button class="btn btn-unique" type="submit">Tambah <i class="fas fa-paper-plane-o ml-1"></i></button>
       </div>
+      </form>
     </div>
   </div>
 </div>
