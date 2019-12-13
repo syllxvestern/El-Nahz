@@ -199,10 +199,13 @@ session_start();
 <body>
   <nav class='mb-1 navbar navbar-expand-lg navbar-dark bg-primary info-color'>
     <a class='navbar-brand mr-0 mr-md-2' href='home.php' aria-label='Bootstrap'>
-    <i class="fa fa-gamepad" aria-hidden="true"></i>
+    <i class="fa fa-gamepad fa-2x" aria-hidden="true"></i>
 
     </a>
-    <div class='navbar-nav-scroll'>
+    <div>
+    <h2>Hmm Shop</h2>
+    </div>
+    <!-- <div class='navbar-nav-scroll'>
       <ul class='navbar-nav bd-navbar-nav flex-row'>
         <li class='nav-item'>
           <a class='nav-link active' href=#>Kode Voucher</a>
@@ -217,7 +220,7 @@ session_start();
           <a class='nav-link' href=#>Pro</a>
         </li>
       </ul>
-    </div>
+    </div> -->
     <ul class='navbar-nav ml-auto nav-flex-icons'>
       <li class='nav-item avatar dropdown'>
       <div class="text-center">

@@ -220,7 +220,7 @@
     <i class="fa fa-gamepad" aria-hidden="true"></i>
 
     </a>
-    <div class='navbar-nav-scroll'>
+    <!-- <div class='navbar-nav-scroll'>
       <ul class='navbar-nav bd-navbar-nav flex-row'>
         <li class='nav-item'>
           <a class='nav-link active' href=#>Kode Voucher</a>
@@ -235,7 +235,7 @@
           <a class='nav-link' href=#>Pro</a>
         </li>
       </ul>
-    </div>
+    </div> -->
     <ul class='navbar-nav ml-auto nav-flex-icons'>
       <li class='nav-item avatar dropdown'>
       <div class="text-center">
@@ -260,29 +260,29 @@
   <div class='container' id='head1'>
     <h3 class="h7-responsive product-name">Transaksi Berhasil</h3>
       <?php
-        // while($row = mysqli_fetch_assoc(mysqli_query($connect, "select * from game where idgame=$idgame"))){
-        //     ?>
-        //         <img src='data:image/jpeg;base64,<?php echo base64_encode( $row['gambar'] )?>' width="300px">
-        //         <table>
-        //             <tr>
-        //                 <td>Nama Game</td>
-        //                 <td>: <?php echo $row['namagame'] ?></td>
-        //             </tr>
+        $row = mysqli_fetch_assoc(mysqli_query($connect, "select * from game where idgame=$idgame"))
+            ?>
+                <img src='data:image/jpeg;base64,<?php echo base64_encode( $row['gambar'] )?>' width="300px">
+                <table>
+                    <tr>
+                        <td>Nama Game</td>
+                        <td>: <?php echo $row['namagame'] ?></td>
+                    </tr>
                 
-        //     <?php
-        // }
+            <?php
+        
         
       ?>
       <tr>
-        <td>Nominal<td>
-        <td>: <?php echo $notelp ?></td>
+        <td>Nominal</td>
+        <td>: <?php echo $nominal ?></td>
       </tr>
       <tr>
-        <td>Metode Pembayaran<td>
+        <td>Metode Pembayaran</td>
         <td>: <?php echo $metode ?></td>
       </tr>
       <tr>
-        <td>No Telp<td>
+        <td>No Telp</td>
         <td>: <?php echo $notelp ?></td>
       </tr>
       </table>

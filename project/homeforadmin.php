@@ -261,7 +261,10 @@ box-shadow: 0 1px 0 0 #00c851; }
     <a class='navbar-brand mr-0 mr-md-2' href='home.php' aria-label='Bootstrap'>
       <img src='m.png' class='rounded-circle z-depth-0' height='50'>
     </a>
-    <div class='navbar-nav-scroll'>
+    <div>
+    <h2>Hmm Shop</h2>
+    </div>
+    <!-- <div class='navbar-nav-scroll'>
       <ul class='navbar-nav bd-navbar-nav flex-row'>
         <li class='nav-item'>
           <a class='nav-link active' href=#>Kode Voucher</a>
@@ -276,7 +279,7 @@ box-shadow: 0 1px 0 0 #00c851; }
           <a class='nav-link' href=#>Pro</a>
         </li>
       </ul>
-    </div>
+    </div> -->
     <ul class='navbar-nav ml-auto nav-flex-icons'>
       <li class='nav-item avatar dropdown'>
       <div class="text-center">
@@ -337,18 +340,6 @@ box-shadow: 0 1px 0 0 #00c851; }
         <input type="file" id="form33" class="form-control validate">
         <label data-error="wrong" data-success="right" for="form33">Choose File</label>
       </div>
-
-        <div class="md-form mb-5">
-          <i class="fas fa-tag prefix grey-text"></i>
-          <input type="text" id="form32" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="form32">Subject</label>
-        </div>
-
-        <div class="md-form">
-          <i class="fas fa-pencil prefix grey-text"></i>
-          <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
-          <label data-error="wrong" data-success="right" for="form8">Your message</label>
-        </div>
 
       </div>
       <div class="modal-footer d-flex justify-content-center">
