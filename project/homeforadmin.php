@@ -322,7 +322,7 @@ box-shadow: 0 1px 0 0 #00c851; }
   aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-    <form action="" method=post>
+    <form action="add.php" method=post>
       <div class="modal-header text-center">
         <h4 class="modal-title w-100 font-weight-bold">Add Games</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -407,6 +407,8 @@ while($row=mysqli_fetch_array($result)){
             <!-- Add to Cart -->
             <div class="card-body">
               <div class="row">
+              <form action=delete.php method=post>
+              <input type="hidden" id="hide" class="form-control" name=idgame value='<?php echo $row['idgame']?>'>
                 <div class="col-md-6">
                   
                   <select class="md-form mdb-select colorful-select dropdown-primary">
@@ -433,10 +435,11 @@ while($row=mysqli_fetch_array($result)){
               <div class="text-center">
 
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button class="btn btn-danger">Delete
+                <button class="btn btn-danger" type="submit">Delete
                   
                 </button>
               </div>
+              </form>
             </div>
             <!-- /.Add to Cart -->
           </div>

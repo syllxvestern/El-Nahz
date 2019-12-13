@@ -5,8 +5,10 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-<title>Hmm Shop</title>
+<title style = "font-family:georgia,garamond,serif;font-size:16px;font-style:italic;">Hmm Shop</title>
 <link rel="shortcut icon" type="image/png" href="m.png"/>
+<!-- <link rel='stylesheet' type='text/css' href='main.css'>
+<script type=text/javascript src="dot.js"></script> -->
   <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css'>
   <link rel='stylesheet' type='text/css' href='css/mdb-plugins-gathered.min.js'>
   <link rel='stylesheet' type='text/css' href='css/bootstrap.css'>
@@ -202,8 +204,8 @@ session_start();
     <i class="fa fa-gamepad fa-2x" aria-hidden="true"></i>
 
     </a>
-    <div>
-    <h2>Hmm Shop</h2>
+    <div style="color : white;">
+    <h2>  Hmm Shop</h2>
     </div>
     <!-- <div class='navbar-nav-scroll'>
       <ul class='navbar-nav bd-navbar-nav flex-row'>
@@ -256,6 +258,8 @@ session_start();
 
     </ul>
   </nav>
+  <!-- <canvas id=lel></canvas>
+		<script src=dot.js></script> -->
   <div class='container' id='head1'>
     <div class=row>
 <?php

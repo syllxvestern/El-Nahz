@@ -1,6 +1,14 @@
 <?php
     include "koneksi.php";
     session_start();
+    if(!isset($_SESSION['email'])){
+      ?>
+      <script>
+      alert("Anda Harus Login");
+      window.location.replace("home.php");
+      </script>
+      <?php
+    }
     $email = $_SESSION['email'];
     $gameid = $_POST['gameid'];
     $notelp = $_POST['notelp'];
