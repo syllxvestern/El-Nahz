@@ -22,6 +22,9 @@ session_start();
     integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6'
     crossorigin='anonymous'></script>
   <style>
+#lel {
+  position: absolute;
+}
     html,
     body {
       margin: 0;
@@ -129,7 +132,7 @@ session_start();
     }
 
     body {
-      background-color: rgb(194, 194, 194);
+      background-color: rgb(0, 153, 255);
     }
 
     .align-self-center {
@@ -266,6 +269,8 @@ height: 3.5rem; }
   </style>
 </head>
 <body>
+<canvas id="lel"></canvas>
+<script src=dot.js></script>
   <nav class='mb-1 navbar navbar-expand-lg navbar-dark bg-primary info-color'>
     <a class='navbar-brand mr-0 mr-md-2' href='home.php' aria-label='Bootstrap'>
       <img src='m.png' class='rounded-circle z-depth-0' height='50'>
@@ -331,7 +336,7 @@ height: 3.5rem; }
   aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-    <form action="add.php" method=post class=md-form>
+    <form action="add.php" method=post class=md-form enctype="multipart/form-data">
       <div class="modal-header text-center">
         <h4 class="modal-title w-100 font-weight-bold">Add Games</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -354,7 +359,7 @@ height: 3.5rem; }
         <div class="file-field">
                 <div class="btn btn-outline-info waves-effect btn-sm float-left">
                   <span>Choose files</span>
-                  <input type="file" id=file name=file multiple>
+                  <input type="file" id=file name=tfile multiple>
                 </div>
                 <div class="file-path-wrapper">
                   <input class="file-path validate" type="text" placeholder="Upload one or more files">
@@ -477,7 +482,7 @@ while($row=mysqli_fetch_array($result)){
   aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-    <form action="edit.php" method=post class=md-form>
+    <form action="edit.php" method=post class=md-form enctype=multipart/form-data>
     <input type="hidden" id="hide" class="form-control" name=idgame value='<?php echo $row['idgame']?>'>
       <div class="modal-header text-center">
         <h4 class="modal-title w-100 font-weight-bold">Edit Games</h4>
@@ -495,7 +500,7 @@ while($row=mysqli_fetch_array($result)){
         <div class="file-field">
                 <div class="btn btn-outline-info waves-effect btn-sm float-left">
                   <span>Choose files</span>
-                  <input type="file" name=file multiple>
+                  <input type="file" name=tfile multiple>
                 </div>
                 <div class="file-path-wrapper">
                   <input class="file-path validate" type="text" placeholder="Upload one or more files">

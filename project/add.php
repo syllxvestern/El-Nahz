@@ -3,7 +3,7 @@
 
     $name = $_POST['gamename'];
     // echo $_FILES['file']['name'];
-    $img = addslashes(file_get_contents(basename($_POST['file'])));
+    $img = addslashes (file_get_contents($_FILES['tfile']['tmp_name']));
     $ket = $_POST['ket'];
     // $image = base64_encode($img);
 

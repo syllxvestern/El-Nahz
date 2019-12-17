@@ -27,6 +27,10 @@ session_start();
     integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6'
     crossorigin='anonymous'></script>
   <style>
+#lel {
+  position: absolute;
+}
+
     html,
     body {
       margin: 0;
@@ -116,7 +120,7 @@ session_start();
       background-color: white;
     }
     body {
-      background-color: rgb(194, 194, 194);
+      background-color: rgb(0, 153, 255);
     }
     .align-self-center {
       margin: auto;
@@ -199,6 +203,8 @@ session_start();
   </style>
 </head>
 <body>
+<canvas id="lel"></canvas>
+<script src=dot.js></script>
   <nav class='mb-1 navbar navbar-expand-lg navbar-dark bg-primary info-color'>
     <a class='navbar-brand mr-0 mr-md-2' href='home.php' aria-label='Bootstrap'>
     <i class="fa fa-gamepad fa-2x" aria-hidden="true"></i>

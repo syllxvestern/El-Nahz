@@ -4,7 +4,7 @@
 
     $name = $_POST['gamename'];
     $info = $_POST['ket'];
-    $img = addslashes(file_get_contents(basename($_POST['file'])));
+    $img = addslashes (file_get_contents($_FILES['tfile']['tmp_name']));
     $idgame = $_POST['idgame'];
 
     $result = mysqli_query($connect, "update game set namagame = '$name', ket = '$info', gambar = '$img' where idgame=$idgame");
