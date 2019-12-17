@@ -291,7 +291,12 @@ while($row=mysqli_fetch_array($result)){
               <!--Slides-->
               <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
+                  <div class=row>
                   <img src='data:image/jpeg;base64,<?php echo base64_encode( $row['gambar'] )?>' width="300px">
+</div>
+                  <div class=row>
+                <p align=left><?php echo $row['ket']?></p>
+</div>
                 </div>
               </div>
               <!--/.Slides-->
@@ -361,6 +366,7 @@ while($row=mysqli_fetch_array($result)){
                 <button class="btn btn-primary">Add to cart
                  </button>
               </div>
+              
 </form>
             </div>
                 <i class="fas fa-cart-plus ml-2" aria-hidden="true"></i>

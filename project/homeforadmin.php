@@ -243,6 +243,15 @@ box-shadow: 0 1px 0 0 #00c851; }
 border-bottom: 1px solid #00c851;
 -webkit-box-shadow: 0 1px 0 0 #00c851;
 box-shadow: 0 1px 0 0 #00c851; }
+.file-field.medium .file-path-wrapper {
+height: 3rem; }
+.file-field.medium .file-path-wrapper .file-path {
+height: 2.8rem; }
+
+.file-field.big-2 .file-path-wrapper {
+height: 3.7rem; }
+.file-field.big-2 .file-path-wrapper .file-path {
+height: 3.5rem; }
 
     @media not all and (min-resolution:.001dpcm) {
       @supports (-webkit-appearance: none) and (stroke-color:transparent) {
@@ -322,7 +331,7 @@ box-shadow: 0 1px 0 0 #00c851; }
   aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-    <form action="add.php" method=post>
+    <form action="add.php" method=post class=md-form>
       <div class="modal-header text-center">
         <h4 class="modal-title w-100 font-weight-bold">Add Games</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -331,16 +340,26 @@ box-shadow: 0 1px 0 0 #00c851; }
       </div>
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
-          <i class="fas fa-user prefix grey-text"></i>
+          
           <input type="text" id="form34" class="form-control validate" name="gamename">
           <label data-error="wrong" data-success="right" for="form34">Game Name</label>
         </div>
 
         <div class="md-form mb-5">
-        <i class="fas fa-cloud-upload-alt ml-3"></i>
-        <input type="file" id="form33" class="form-control validate" name="file">
-        <label data-error="wrong" data-success="right" for="form33">Choose File</label>
-      </div>
+         
+          <textarea type="text" id="form34" class="md-textarea form-control" name="ket"></textarea>
+          <label data-error="wrong" data-success="right" for="form34">Information</label>
+        </div>
+
+        <div class="file-field">
+                <div class="btn btn-outline-info waves-effect btn-sm float-left">
+                  <span>Choose files</span>
+                  <input type="file" id=file name=file multiple>
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                </div>
+              </div>
 
       </div>
       <div class="modal-footer d-flex justify-content-center">
@@ -371,6 +390,13 @@ while($row=mysqli_fetch_array($result)){
   aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
+    <div class="modal-header">
+            
+            <h4 class="modal-title" id="myModalLabel"><?php echo $row['namagame']?></h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
       <div class="modal-body">
         <div class="row">
           <div class="col-lg-5">
@@ -432,14 +458,64 @@ while($row=mysqli_fetch_array($result)){
 
                 </div>
               </div>
+              
               <div class="text-center">
-
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              
+                
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#<?php echo $row['namagame']?>edit">Edit</button>
                 <button class="btn btn-danger" type="submit">Delete
                   
                 </button>
+
+
               </div>
+              <div class=row>
+                <p align=left><?php echo $row['ket']?></p>
+</div>
               </form>
+              <div class="modal fade" id="<?php echo $row['namagame']?>edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    <form action="edit.php" method=post class=md-form>
+    <input type="hidden" id="hide" class="form-control" name=idgame value='<?php echo $row['idgame']?>'>
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Edit Games</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          
+          <input type="text" id="form34" class="form-control validate" name="gamename" value=<?php echo $row['namagame']?>>
+          <label data-error="wrong" data-success="right" for="form34">Game Name</label>
+        </div>
+
+        <div class="file-field">
+                <div class="btn btn-outline-info waves-effect btn-sm float-left">
+                  <span>Choose files</span>
+                  <input type="file" name=file multiple>
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                </div>
+              </div>
+
+      <div class="md-form mb-5">
+          
+          <textarea type="text" id="form34" class="md-textarea form-control" name="ket" value=<?php echo $row['ket']?>></textarea>
+          <label data-error="wrong" data-success="right" for="form34">Information</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-unique" type="submit">Edit <i class="fas fa-paper-plane-o ml-1"></i></button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
             </div>
             <!-- /.Add to Cart -->
           </div>
